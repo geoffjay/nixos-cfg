@@ -1,0 +1,11 @@
+version: "3"
+
+tasks:
+  prepare:
+    cmds:
+      - mkdir -p ./etc/nixos
+      - mkdir -p ./home/cap/.config/home-manager
+  sync:
+    cmds:
+      - rsync -av /etc/nixos/ ./etc/nixos/
+      - rsync -av /home/cap/.config/home-manager/ ./home/cap/.config/home-manager/
